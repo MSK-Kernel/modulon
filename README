@@ -90,19 +90,3 @@ Modulon Software Foundation (MSF)
 Website: https://modulonsoftware.org
 
 Copyright (c) 2026 Modulon Software Foundation.
-
-COMPILER FLAG NOTES
--------------------
-
-``-S`` writes assembly to ``a.s`` by default; ``-o FILE`` overrides the
-output path. ``-c`` currently supports only i386 relocatable objects and
-must be paired with ``-m32`` (for example, ``mlonc -m32 -c input.mlon``).
-The output filename extension does not implicitly select a target or mode.
-
-The compiler rejects ``-O*``, ``-Wall``, ``-Wextra``, ``-Wpedantic``,
-``-I*``, and ``-D*`` because optimization, warning-control, include-path,
-and command-line macro-definition behavior are not implemented. Some
-freestanding/linker compatibility flags (``-ffreestanding``, ``-fno-builtin``,
-``-fno-stack-protector``, ``-fno-pie``, ``-fno-pic``, ``-nostdlib``,
-``-nostdinc``, and ``-std=...``) are accepted for build-script compatibility
-but currently do not change compiler behavior.
